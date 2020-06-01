@@ -1,1 +1,1 @@
-# program
+# hanya sebuah program saja
