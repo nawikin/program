@@ -1,6 +1,6 @@
                                                                                                                                                          ---  query mysql ---
  
-ddl.
+-- ddl.
 
 ---membuat database
 CREATE DATABASE nama_database;
@@ -17,7 +17,7 @@ DROP DATABASE nama_database;
 drop database if exists nama_database;
 if exists di gunakan untuk menghilangkan pesan error jika seandainya database tersebut memang tidak ada
 
---------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 ---membuat tabel baru
 CREATE TABLE nama_table (
 nama_kolom1 tipe data(panjang)NOT NULL AUTO_INCREMENT,
@@ -150,58 +150,58 @@ SELECT nama_kolom1, nama_kolom2, dlln FROM nama_tabel WHERE kondisi;
 ---melihat 1 baris saja
 SELECT * FROM nama_tabel WHERE nama_kolom = 'nilai_kolom';
 
-kodisinya
+-- kodisinya
 
-operator aritmmatika
-+
- -
- *
- /
- % 
+-- operator aritmmatika
+-- +
+--  -
+--  *
+--  /
+--  % 
 
-operator logika
-not atau !
-and atau &&
-or atau ||
-xor
+-- operator logika
+-- not atau !
+-- and atau &&
+-- or atau ||
+-- xor
 
-operatot perbandingan
-=  
-sama dengan
+-- operatot perbandingan
+-- =  
+-- sama dengan
 
-<>    !=  
-tidak sama dengan
+-- <>    !=  
+-- tidak sama dengan
 
-<=>
+-- <=>
 
-<
-lebih kecil ddari
+-- <
+-- lebih kecil ddari
 
-<=  
-kurang dari atau sama dengan
+-- <=  
+-- kurang dari atau sama dengan
 
->  
-lebih besar dari
+-- >  
+-- lebih besar dari
 
->=  
- lebih besar dariatu sama dengan
+-- >=  
+--  lebih besar dariatu sama dengan
 
-bettween 
- berada dalam rentan tertentu 
+-- bettween 
+--  berada dalam rentan tertentu 
 
-in 
-menentukan beberapa nilai yang berada dalam sebuah kolom
+-- in 
+-- menentukan beberapa nilai yang berada dalam sebuah kolom
 
-not in
-menentukan beberapa nilai yang tidak berada dalam sebuah kolom
+-- not in
+-- menentukan beberapa nilai yang tidak berada dalam sebuah kolom
 
-is null
-is not null
+-- is null
+-- is not null
 
-like  
-kata kunci kriteria tertentu
+-- like  
+-- kata kunci kriteria tertentu
 
-regexp   rlike
+-- regexp   rlike
 
 
 ---mengurutkan hasil tampilan data 
@@ -210,9 +210,9 @@ SELECT nama_kolom1,nama_kolom2 dll FROM nama_tabel WHERE kondisi ORDER BY nama_k
 
 SELECT * FROM nama_tabel  ORDER BY nama_kolom1,nama_kolom2,dll  ASC/DESC;
 
-urut
-ASC = urutan dari kecil ke besar
-DESC =urutan dari besar ke kecil
+-- urut
+-- ASC = urutan dari kecil ke besar
+-- DESC =urutan dari besar ke kecil
 
 ---membatasi hasil tampilan data
 
@@ -226,52 +226,52 @@ SELECT * FROM nama_tabel ORDER BY nama_kolom1,nama_kolom2 dll LIMIT 0,3;
 SELECT nama_kolom_tampil FROM nama_tabel WHERE nama_kolom_cari LIKE keyword_pencarian;
 SELECT nama_kolom_tampil FROM nama_tabel WHERE nama_kolom_cari NOT LIKE keyword_pencarian;
 
-keyword pencarian
-_   karakter ganti yang cocok untuk satu karakter apa saja
-%  karakter ganti yang cocok untuk karakter apa saja dengan panjang karakter tidak terbatas,termasuk tidak ada karakter 
+--  keyword pencarian
+-- _   karakter ganti yang cocok untuk satu karakter apa saja
+-- %  karakter ganti yang cocok untuk karakter apa saja dengan panjang karakter tidak terbatas,termasuk tidak ada karakter 
 
 
-'huruf%'
-menampilkan data yang di awali kata 'huruf',dan diikuti dengan karakter apa saja
+-- 'huruf%'
+-- menampilkan data yang di awali kata 'huruf',dan diikuti dengan karakter apa saja
 
-'%huruf' 
-menampilkan seluruh kata dengan panjang berapa pun yang di akhiri dengan huruf 
+-- '%huruf' 
+-- menampilkan seluruh kata dengan panjang berapa pun yang di akhiri dengan huruf 
 
-'huruf_'
-menampilkan kata yang di awali dengan huruf ,dan diikuti dengan satu karakter apa saja
+-- 'huruf_'
+-- menampilkan kata yang di awali dengan huruf ,dan diikuti dengan satu karakter apa saja
 
-'huruf1_huruf2' 
-menampilkan kata yang di awali dengan huruf1 diikuti oleh 2 karakter bebas,namun di akhiri dengan huruf2
+-- 'huruf1_huruf2' 
+-- menampilkan kata yang di awali dengan huruf1 diikuti oleh 2 karakter bebas,namun di akhiri dengan huruf2
 
-'%kata%' 
-menampilkan data yang mengandung kata.
+-- '%kata%' 
+-- menampilkan data yang mengandung kata.
 
-'_huruf%'
- menampilkan data yang karakter keduanya diawali dengan huruf
+-- '_huruf%'
+--  menampilkan data yang karakter keduanya diawali dengan huruf
 
 
 ---pencarian data regular expression (REGEXP)
 SELECT nama_kolom_tampil FROM nama_tabel WHERE nama_kolom_cari REGEXP keyword_reguler_expression;
 
 
-keyword_reguler_expression
-. : tanda titik dalam RegExp berarti sebuah karakter apa saja
+-- keyword_reguler_expression
+-- . : tanda titik dalam RegExp berarti sebuah karakter apa saja
 
-[ … ]: tanda kurung siku ini berarti kumpulan karakter. Misalkan [abc] akan cocok dengan ‘a’, ‘b’, atau ‘c’.
- kita bisa juga menggunakan jangkauan (range), contohnya [a-z] akan cocok dengan seluruh huruf, [0-9] akan cocok dengan seluruh angka.
+-- [ … ]: tanda kurung siku ini berarti kumpulan karakter. Misalkan [abc] akan cocok dengan ‘a’, ‘b’, atau ‘c’.
+--  kita bisa juga menggunakan jangkauan (range), contohnya [a-z] akan cocok dengan seluruh huruf, [0-9] akan cocok dengan seluruh angka.
 
-*: tanda bintang ini akan cocok dengan 0 atau lebih karakter sebelumnya. Misalkan ‘a*’ berarti akan cocok dengan seluruh kata yang mengandung 0 atau lebih a.
+-- *: tanda bintang ini akan cocok dengan 0 atau lebih karakter sebelumnya. Misalkan ‘a*’ berarti akan cocok dengan seluruh kata yang mengandung 0 atau lebih a.
 
-^: tanda pangkat atau topi ini menandakan berada di awal kata.
+-- ^: tanda pangkat atau topi ini menandakan berada di awal kata.
 
-$: tanda dollar ini berarti bahwa pola berada di akhir kata.
+-- $: tanda dollar ini berarti bahwa pola berada di akhir kata.
 
-‘ab*’: Pola ini berarti akan cocok dengan seluruh kata yang mengandung a dan diikuti oleh b atau tidak sama sekali. 
-Contohnya: ‘a’, ‘ab’, ‘abbbbbb’, dan juga ‘kebab’, karena untuk RegExp, kita harus menyatakan dimana karakter itu muncul.
+-- ‘ab*’: Pola ini berarti akan cocok dengan seluruh kata yang mengandung a dan diikuti oleh b atau tidak sama sekali. 
+-- Contohnya: ‘a’, ‘ab’, ‘abbbbbb’, dan juga ‘kebab’, karena untuk RegExp, kita harus menyatakan dimana karakter itu muncul.
 
-‘^ab*’: Pola ini sama artinya dengan ‘ab*’ seperti diatas, namun tanda ^ menyatakan bahwa pola ini harus berada di awal kata, sehingga ‘kebab’ tidak akan cocok.
+-- ‘^ab*’: Pola ini sama artinya dengan ‘ab*’ seperti diatas, namun tanda ^ menyatakan bahwa pola ini harus berada di awal kata, sehingga ‘kebab’ tidak akan cocok.
 
-‘^s..i$’: Pola ini akan cocok dengan seluruh kata yang diawali dengan s, dan diakhiri dengan i, terdiri dari 4 huruf. Contohnya: susi, sapi, dan siti.
+-- ‘^s..i$’: Pola ini akan cocok dengan seluruh kata yang diawali dengan s, dan diakhiri dengan i, terdiri dari 4 huruf. Contohnya: susi, sapi, dan siti.
 
 
 ---pengelompokan data  GROUP BY
@@ -280,7 +280,7 @@ SELECT nama_kolom FROM nama_tabel GROUP BY nama_kolom;
 
 
 ---mengganti sementara nama kolom atau tabel (AS)
-nama_tabel AS nama_tabel_baru
+nama_tabel AS nama_tabel_baru;
 
 SELECT nama_kolom1 AS nama_kolom_baru,nama_kolom2 AS nama_kolom_baru dll FROM nama_tabel;
 
@@ -293,7 +293,7 @@ SELECT CONCAT (nama_kolom1,' spasi pemisah ',nama_kolom2 dll) AS 'kata2 judul' F
 --------------------------------------------------------------------------------------------------------------
 
 
-menggabungkan tabel INNER JOIN
+-- menggabungkan tabel INNER JOIN
 
 SELECT nama_kolom_tampil FROM  nama_tabel_pertama INNER JOIN nama_tabel_kedua ON nama_kolom_join_tabel_pertama = nama_kolom_join_tabel_kedua;
 
